@@ -6,9 +6,9 @@ class Solution(object):
         :type num: int
         :rtype: bool
         """
-        return num > 0 and \
+        return bool(num > 0 and \
                not num & (num - 1) and \
-               len(bin(num)[2:]) & 1
+               len(bin(num)[2:]) & 1)
 
 if __name__ == '__main__':
     s = Solution()
