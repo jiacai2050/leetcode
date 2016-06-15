@@ -5,7 +5,6 @@
 # set two points, one of which moves one step once and the other moves two steps
 # If the list have circle, then the two points will meet at some time
 
- 一个一次走两步，另一个一次走一步，如果如环，那么在某一时刻这两个指针会相遇
 class ListNode(object):
     def __init__(self, x):
         self.val = x
