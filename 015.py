@@ -19,7 +19,7 @@ class Solution(object):
         ret = []
         for x, target in enumerate(nums):
             for y, m in enumerate(nums):
-                remaining = target - m
+                remaining = -target - m
                 if remaining in val_index_dict.keys():
                     for z in val_index_dict.get(remaining):
                         if x < y < z:
@@ -32,7 +32,7 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    # print s.threeSum([-1, 0, 1, 2, -1, -4])
+    print s.threeSum([-1, 0, 1, 2, -1, -4])
     assert s.threeSum([-1, 0, 1, 2, -1, -4]) == [
         [-1, 0, 1],
         [-1, -1, 2]
