@@ -8,6 +8,7 @@
 # 2. 当前位置作为回文串后端，前端向前移动一个字符，然后再同时移动前后两端
 # 3. 当前位置作为回文串前端，后端向后移动一个字符，然后再同时移动前后两端
 
+
 class Solution(object):
     def currentWalk(self, current, inc_func, dec_func):
         offset = 1
@@ -31,11 +32,11 @@ class Solution(object):
 
     def currentLongestPalindrome(self, current):
         self.currentWalk(current, lambda current, offset: current + offset,
-                                  lambda current, offset: current - offset)
+                         lambda current, offset: current - offset)
         self.currentWalk(current, lambda current, offset: current + offset - 1,
-                                  lambda current, offset: current - offset)
+                         lambda current, offset: current - offset)
         self.currentWalk(current, lambda current, offset: current + offset,
-                                  lambda current, offset: current - offset + 1)
+                         lambda current, offset: current - offset + 1)
 
     def longestPalindrome(self, s):
         """
@@ -74,7 +75,7 @@ if __name__ == '__main__':
     s = Solution()
     assert s.longestPalindrome("abacc") == "aba"
     assert s.longestPalindrome("abacccc") == "cccc"
-    assert s.longestPalindrome("a")  == "a"
+    assert s.longestPalindrome("a") == "a"
     assert s.longestPalindrome("aa") == "aa"
     assert s.longestPalindrome("aaa") == "aaa"
     assert s.longestPalindrome("aaaa") == "aaaa"

@@ -2,8 +2,8 @@
 
 # FIX: have duplicate triplets
 
-class Solution(object):
 
+class Solution(object):
     def threeSum(self, nums):
         """
         :type nums: List[int]
@@ -32,8 +32,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.threeSum([-1, 0, 1, 2, -1, -4])
-    assert s.threeSum([-1, 0, 1, 2, -1, -4]) == [
-        [-1, 0, 1],
-        [-1, -1, 2]
-    ]
+    ret = s.threeSum([-1, 0, 1, 2, -1, -4])
+    assert ret == [[-1, 0, 1], [-1, -1, 2]], ret
+    print('done')

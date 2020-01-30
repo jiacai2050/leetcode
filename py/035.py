@@ -9,9 +9,9 @@ class Solution(object):
         :rtype: int
         """
         low = 0
-        high = len(nums)-1
+        high = len(nums) - 1
         while high >= low:
-            mid = int((low+high)/2)
+            mid = int((low + high) / 2)
             if target == nums[mid]:
                 return mid
             if target < nums[mid]:
@@ -24,5 +24,5 @@ class Solution(object):
 if __name__ == '__main__':
     s = Solution()
     assert s.searchInsert([1], 0) == 0
-    assert s.searchInsert([1,3,5,6,9], 8) == 4
-    assert s.searchInsert([1,3,5], 4) == 2
+    assert s.searchInsert([1, 3, 5, 6, 9], 8) == 4
+    assert s.searchInsert([1, 3, 5], 4) == 2

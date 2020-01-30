@@ -1,4 +1,4 @@
- # https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+# https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
 
 class Solution(object):
@@ -29,7 +29,6 @@ class Solution(object):
 
             else:
                 break
-        
 
         return current_max_length
 
