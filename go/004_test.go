@@ -43,19 +43,6 @@ const MaxInt = int(MaxUint >> 1)
 const MinInt = -MaxInt - 1
 
 func findMedianSortedArrays2(nums1 []int, nums2 []int) float64 {
-	maxInt := func(x, y int) int {
-		if x > y {
-			return x
-		}
-		return y
-	}
-	minInt := func(x, y int) int {
-		if x > y {
-			return y
-		}
-		return x
-	}
-
 	n := len(nums1)
 	m := len(nums2)
 	if n > m {

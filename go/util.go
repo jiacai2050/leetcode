@@ -7,6 +7,20 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func maxInt(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
+}
+
+func minInt(x, y int) int {
+	if x > y {
+		return y
+	}
+	return x
+}
+
 type testcase struct {
 	input    interface{}
 	expected interface{}
